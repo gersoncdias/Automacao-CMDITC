@@ -1,0 +1,36 @@
+{
+    "chromeWebSecurity": false,
+    "retries": {
+        "runMode": 2,
+        "openMode": 1
+    },
+    "defaultCommandTimeout": 5000,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "Relatório_Testes",
+        "reportName": "Relatório",
+        "reportTitle": "Relatório de Testes",
+        "reportPageTitle": "Título da Página",
+        "takePassedScreenshot": false,
+        "clearOldScreenshots": false,
+        "shortScrFileNames": false,
+        "inline": true,
+        "charts": true,
+        "autoOpen": false,
+        "jsonReport": true,
+        "multiReport": true,
+        "timestamp": "dd-mm-yyyy_HH:MM:ss",
+        "capture": "runner",
+        "overwrite": false,
+        "saveJson": true
+    },
+    "env": {
+        "url": "https://cmdisg.websitesa.local/site/login",
+        "senha_admin": "almeidadias08*",
+        "user_admin": "admin",
+        "senha_recep": "@123456",
+        "user_recep": "Testes",
+        "paciente": "Gerson Costa Dias"
+    }
+}

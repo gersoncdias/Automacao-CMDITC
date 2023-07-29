@@ -1,0 +1,47 @@
+class cadastro_pctPage {
+    constructor() {
+
+        this.btn_cadastro_pct = 'a.showModalButton.btn.btn-success[href="/paciente/laudo/create"][title="Criar Paciente"]'
+        this.txt_titulo = '.modal-header > span'
+        this.btn_fechar = '#w0 > button.btn-default'
+        this.txt_input = 'label.control-label[for="paciente-nome"]'
+        this.txt_input_sexo = ':nth-child(4) > .col-sm-12 > .form-group > .control-label'
+        this.txt_telefone = ':nth-child(5) > :nth-child(2) > .form-group > .control-label'
+        this.txt_cep = ':nth-child(6) > .col-sm-3 > .form-group > label'
+        this.txt_endereco = '.col-sm-9 > .form-group > .control-label'
+        this.txt_email = '.col-sm-6 > .form-group > .control-label'
+        this.txt_numero = '.col-sm-2 > .form-group > .control-label'
+        this.btn_criar = '#w0 > .btn-success'
+        this.msg_alert = '.modal-footer .bootstrap-dialog-footer .bootstrap-dialog-footer-buttons button'
+        this.txt_complemento = '.col-sm-10 > .form-group > .control-label'
+        this.txt_cidade = ':nth-child(8) > :nth-child(2) > .form-group > .control-label'
+        this.txt_bairro = ':nth-child(8) > :nth-child(3) > .form-group > .control-label'
+        this.txt_estado = ':nth-child(8) > :nth-child(1) > .form-group > .control-label'
+        this.txt_sus = ':nth-child(5) > :nth-child(3) > .form-group > .control-label'
+        this.txt_nasc = 'label.control-label.has-star[for="paciente-nascimento"]'
+        this.painel = '.panel'
+        this.tc = '[href="/paciente/laudo/exame?paciente_id=39&tipo_id=2"]'
+        this.buscar_pacientes = '.input-group > :nth-child(4)'
+        this.modal_buscar = '.modal-header'
+        this.input_nome = '#paciente-nome'
+        this.input_email = '#paciente-email'
+        this.input_sexo = '#paciente-sexo > :nth-child(3)'
+        this.input_cep = '#paciente-cep'
+        this.input_endereco = '#paciente-endereco'
+        this.input_dt_nasci = '#paciente-nascimento'
+        this.input_telefone = '#paciente-telefone'
+        this.input_numero = '#paciente-numero'
+        this.input_estado = '#paciente-estado'
+        this.input_cidade = '#paciente-cidade'
+        this.input_bairro = '#paciente-bairro'
+        this.input_complemento = '#paciente-complemento'
+        this.input_sus = '#paciente-cartao_sus'
+        this.select_nome = 'div.tt-suggestion.tt-selectable:contains("GERSON DA COSTA DIAS")'
+        this.btn_enviar = 'button.btn.btn-primary.pull-right:contains("Enviar")'
+        this.btn_fechar = 'button.btn.btn-default[data-dismiss="modal"]:contains("Fechar")'
+        this.msg_erro = '.help-block'
+
+    }
+}
+
+module.exports = cadastro_pctPage

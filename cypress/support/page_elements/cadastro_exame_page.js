@@ -1,0 +1,41 @@
+class cadastro_examePage {
+    constructor() {
+
+        this.btn_cadastro_pct = 'a.showModalButton.btn.btn-success[href="/paciente/laudo/create"][title="Criar Paciente"]'
+        this.txt_titulo = '.modal-header > span'
+        this.btn_fechar = '#w0 > button.btn-default'
+        this.txt_input = 'label.control-label[for="paciente-nome"]'
+        this.txt_input_sexo = ':nth-child(4) > .col-sm-12 > .form-group > .control-label'
+        this.txt_telefone = ':nth-child(5) > :nth-child(2) > .form-group > .control-label'
+        this.txt_cep = ':nth-child(6) > .col-sm-3 > .form-group > label'
+        this.txt_endereco = '.col-sm-9 > .form-group > .control-label'
+        this.txt_email = '.col-sm-6 > .form-group > .control-label'
+        this.txt_numero = '.col-sm-2 > .form-group > .control-label'
+        this.btn_criar = '#w0 > .btn-success'
+        this.msg_alert = '.modal-footer .bootstrap-dialog-footer .bootstrap-dialog-footer-buttons button'
+        this.painel = '.panel'
+        this.tc = '[href="/paciente/laudo/exame?paciente_id=39&tipo_id=2"]'
+        this.search_nascimento = '#pacientesearch-nascimento'
+        this.msg_erro = '.help-block'
+        this.painel_criando_exame = '.content'
+        this.btn_exame_tc = 'a[href="/paciente/laudo/exame?paciente_id=19547&tipo_id=2"][title="Gerenciar TC"]'
+        this.exame = 'td:has(a[title="Gerenciar TC"])'
+        this.seleciona_unidade = '#select2-laudo-unidade_id-container'
+        this.seleciona_medico = '#select2-laudo-medico-container'
+        this.seleciona_regiao = '#select2-laudo-regiao_id-container'
+        this.select_dropdown = '.select2-results__option'
+        this.contraste = 'select[name="Laudo[contraste]"]'
+        this.data_exame_realizado = '#laudo-data_exame'
+        this.indicacao_clinica = '#laudo-indicacao'
+        this.input_pendencia = '#laudo-pendencia'
+        this.salvar = 'button.btn.btn-primary'
+        this.btn_pendente = '.btn-info'
+        this.btn_urgencia = '.btn-danger'
+        this.exame_registrado = '#w1'
+        this.deleta_exame = 'a.btn.btn-danger.btn-xs[href^="/paciente/laudo/exame-delete?id="]'
+        this.confirma_deletar = '.modal-content'
+        this.btn_confirma_deletar = 'button.btn-warning'
+    }
+}
+
+module.exports = cadastro_examePage
