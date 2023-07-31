@@ -32,10 +32,13 @@ module.exports = (on, config) => {
   })
 
   on('before:browser:launch', (browser = {}, launchOptions) => {
-    launchOptions.args.push('--use-fake-device-for-media-stream')
-    launchOptions.args.push('--use-fake-ui-for-media-stream')
-
-    return launchOptions
+    // Habilitar a opção para bloquear carregamento de mídia, incluindo vídeos (se necessário).
+    if (browser.name === 'chrome') {
+      launchOptions.args.push('--disable-features=MediaEngagement');
+      launchOptions.args.push('--use-fake-device-for-media-stream');
+      launchOptions.args.push('--use-fake-ui-for-media-stream');
+    }
+    return launchOptions;
   });
 
   return getConfigurationByFile(file)
