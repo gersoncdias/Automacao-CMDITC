@@ -8,29 +8,32 @@ Cypress.Commands.add('login', {
   timeout: 7000
 }, (user, senha) => {
 
-  cy.get(loginPg.txt_titulo)
-    .should('exist')
-    .should('be.visible')
-    .should('contains.text', 'Faça seu login para começar')
+  cy.session([user, senha], () => {
 
-  cy.get(loginPg.campo_usuario)
-    .should('exist')
-    .should('be.visible')
-    .type(user)
+    cy.get(loginPg.txt_titulo)
+      .should('exist')
+      .should('be.visible')
+      .should('contains.text', 'Faça seu login para começar')
 
-  cy.get(loginPg.campo_senha)
-    .should('exist')
-    .should('be.visible')
-    .type(senha, {
-      log: false
-    })
+    cy.get(loginPg.campo_usuario)
+      .should('exist')
+      .should('be.visible')
+      .type(user)
 
-  cy.get(loginPg.btn_login)
-    .should('exist')
-    .should('be.visible')
-    .click()
+    cy.get(loginPg.campo_senha)
+      .should('exist')
+      .should('be.visible')
+      .type(senha, {
+        log: false
+      })
 
-  cy.wait(1000)
+    cy.get(loginPg.btn_login)
+      .should('exist')
+      .should('be.visible')
+      .click()
+
+    cy.wait(1000)
+  })
 })
 
 Cypress.Commands.add('Valida_msg_erro', (erro) => {
