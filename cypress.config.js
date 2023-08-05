@@ -23,6 +23,12 @@ module.exports = defineConfig({
   reporter: "silent",
   video: false,
 
+  reporter: "junit",
+  reporterOptions: {
+    mochaFile: "cypress/reports/junit/test-results-[hash].xml",
+    toConsole: true
+  },
+
   // reporter: 'cypress-multi-reporters',
   // reporterOptions: {
   //   reportDir: 'cypress/reports',
