@@ -24,7 +24,9 @@
     },
     "main": "cypress.json",
     "scripts": {
-        "build": "npm install "
+        "build": "npm install ",
+        "cypress:verify": "cypress verify",
+        "cypress:run": "npx cypress run"
     },
     "standard": {
         "globals": []
