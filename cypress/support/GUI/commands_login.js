@@ -8,8 +8,6 @@ Cypress.Commands.add('login', {
   timeout: 7000
 }, (user, senha) => {
 
-  cy.session([user, senha], () => {
-
     cy.get(loginPg.txt_titulo)
       .should('exist')
       .should('be.visible')
@@ -23,9 +21,7 @@ Cypress.Commands.add('login', {
     cy.get(loginPg.campo_senha)
       .should('exist')
       .should('be.visible')
-      .type(senha, {
-        log: false
-      })
+      .type(senha)
 
     cy.get(loginPg.btn_login)
       .should('exist')
@@ -33,7 +29,6 @@ Cypress.Commands.add('login', {
       .click()
 
     cy.wait(1000)
-  })
 })
 
 Cypress.Commands.add('Valida_msg_erro', (erro) => {
