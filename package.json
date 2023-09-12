@@ -23,7 +23,9 @@
         "typescript": "^5.1.6"
     },
     "main": "cypress.json",
-    "scripts": {},
+    "scripts": {
+        "build": "npm run build"
+    },
     "standard": {
         "globals": []
     },
